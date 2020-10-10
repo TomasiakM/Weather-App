@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="App">
       <Form weatherData={weatherData} setWeatherData={setWeatherData} />
-      <div className="weatherSection">
-        {weatherData.location && (
+      {weatherData.location && (
+        <div className="weatherSection">
           <div className="cards">
             <TodayWeatherCard weatherData={weatherData} />
             <div className="forecastCards">
@@ -25,8 +25,8 @@ function App() {
               })}
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
       {weatherData.error && <Error weatherData={weatherData.error} />}
     </div>
   );
