@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Form weatherData={weatherData} setWeatherData={setWeatherData} />
-      <div className="weatherIcons">
+      <div className="weatherSection">
         {weatherData.location && (
           <div className="cards">
             <TodayWeatherCard weatherData={weatherData} />
